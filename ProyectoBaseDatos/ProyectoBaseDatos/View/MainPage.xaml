@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBaseDatos.MainPage"
+             BackgroundImageSource="fondo.png"
+             Title="APP Productos">
+
+    <ScrollView>
+        <StackLayout>
+        <Frame>
+            <StackLayout>
+               <Label Text=" Formulario de productos " TextColor="Orange" FontSize="40"></Label> 
+            </StackLayout>            
+        </Frame>
+        <Label Text="Ingrese todos los datos a continuacion para poder hacer las operaciones CRUD."
+               HorizontalOptions="CenterAndExpand"
+               TextColor="Black"
+               FontSize="15"
+               Margin="10,10,10,10">
+            
+        </Label>
+        <Label Text="" 
+               HorizontalOptions="CenterAndExpand"></Label>
+
+        <Frame>
+        <StackLayout >
+            <Label Text="ID de Producto: " TextColor="Black" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="idProducto" 
+                       Keyboard="Numeric"
+                       Margin="150,0,150,20"/>
+                <Button Text="Buscar"
+                    ImageSource="buscar.png"
+                    Clicked="Button_Clicked"
+                    Margin="150,0,150,20"/>
+               
+                </StackLayout>
+        </Frame>
+        
+        <Frame>
+            <StackLayout>
+                <StackLayout>
+                    <Label Text="Nombre del producto: "
+                           HorizontalTextAlignment="Center"
+                           TextColor="Orange" FontSize="20"/>
+                    <Entry Placeholder="Ingrese el nombre del producto"
+                           x:Name="NombreProducto"
+                           Margin="80,0,80,20"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Descripción del producto: " HorizontalTextAlignment="Center" TextColor="Orange" FontSize="20" />
+                    <Entry Placeholder=" Ingrese la descripción del producto"
+                           Margin="80,0,80,20"
+                           HorizontalTextAlignment="Center"
+                           x:Name="DescripcionProducto"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Précio del producto: "  HorizontalTextAlignment="Center" TextColor="Orange" FontSize="20"/>
+                    <Entry Placeholder="Ingrese el precio del producto"
+                           Margin="80,0,80,20"
+                           Keyboard="Numeric"
+                           HorizontalTextAlignment="Center"
+                           x:Name="PrecioProducto"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Cantidad del producto: "  HorizontalTextAlignment="Center" TextColor="Orange" FontSize="20"/>
+                    <Entry Placeholder="Ingrese la cantidad del producto"
+                           Margin="80,0,80,20"
+                           Keyboard="Numeric"
+                           HorizontalTextAlignment="Center"
+                            x:Name="CantidadProducto"/>
+                    
+                </StackLayout>
+                    <Button Text="Limpiar"
+                    Clicked="Button_Clicked_1"
+                    Margin="150,0,150,20"/>
+                </StackLayout> 
+        </Frame>
+
+        <StackLayout>
+            <Button Text="Guardar"
+                    Clicked="Insertar"
+                    ImageSource="guardar.png"
+                    Margin="150,0,150,20"/>
+            <Button Text="Eliminar" 
+                    Clicked="Eliminar"
+                    ImageSource="eliminar.png"
+                    Margin="150,0,150,20" />
+            <Button Text="Listar Todos"
+                    ImageSource="listar.png"
+                    Clicked="MostrarTodo"
+                    Margin="150,0,150,20"/>
+            
+        </StackLayout>           
+            
+      </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

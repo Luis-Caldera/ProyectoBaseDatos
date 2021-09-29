@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBaseDatos.View.VistaCompleta"
+             Title="Datos completos">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="Lista" Header="" 
+                      >
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Frame>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Mis Productos" 
+                                   FontSize="30"
+                                   TextColor="Orange"
+                                   HorizontalOptions="Center">
+
+                                </Label>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="ID Del Producto" 
+                                                           Grid.Column="0" 
+                                                           TextColor="Black"
+                                                           HorizontalTextAlignment="Center"
+                                                           FontSize="20" Margin="5"/>
+                                    <Label Text="Nombre Del Producto" 
+                                                           Grid.Column="1" 
+                                                           TextColor="Black"
+                                                           HorizontalTextAlignment="Center"
+                                                           FontSize="20" Margin="5"/>
+                                    <Label Text="Precio Del Producto $" 
+                                                           Grid.Column="2"
+                                                           TextColor="Black"
+                                                           HorizontalTextAlignment="Center"
+                                                           FontSize="20"
+                                                           Margin="5"/>
+                                    <Label Text="Descripción Del Producto " 
+                                                           Grid.Column="3"
+                                                           TextColor="Black"
+                                                           HorizontalTextAlignment="Center"
+                                                           FontSize="20"
+                                                           Margin="5"/>
+                                    <Label Text="Cantidad Del Producto " 
+                                                           Grid.Column="4"
+                                                           TextColor="Black"
+                                                           HorizontalTextAlignment="Center"
+                                                           FontSize="20"
+                                                           Margin="5"/>
+                                </Grid>
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding IDProducto}" TextColor="Black" Grid.Column="0" HorizontalTextAlignment="Center"
+                                                           FontSize="20" 
+                                                           />
+                                <Label Text="{Binding NombreProducto}" TextColor="Black" Grid.Column="1" HorizontalTextAlignment="Center"
+                                                           FontSize="20"
+                                                           />
+                                <Label Text="{Binding PrecioProducto}" TextColor="Black" Grid.Column="2" HorizontalTextAlignment="Center"
+                                                           FontSize="20" 
+                                                           />
+                                <Label Text="{Binding DescripcionProducto}" TextColor="Black" Grid.Column="3" HorizontalTextAlignment="Center"
+                                                           FontSize="20" 
+                                                           />
+                                <Label Text="{Binding CantidadProducto}" TextColor="Black" Grid.Column="4" HorizontalTextAlignment="Center"
+                                                           FontSize="20" 
+                                                           />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
